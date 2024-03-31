@@ -11,6 +11,7 @@
 \usepackage{verbatim}
 \usepackage{fancyhdr}
 \usepackage{musixtex}
+\usepackage{multicol}
 \usepackage{xpatch}
 %\usepackage{hyperref}
 \frenchspacing
@@ -29,7 +30,9 @@
 \begin{document}
 \maketitle
 \newpage
+\twocolumn
 \tableofcontents
+\onecolumn
 \newpage
 
 \renewcommand{\lyricfont}{\sffamily}
@@ -48,10 +51,10 @@
 
 \songcolumns{0}
 \pagepreludes
-
 \begin{songs}{}
 \include{piesne/davam-vsetko.tex}
 \include{piesne/prisli-sme-ta-vzyvat.tex}
 \include{piesne/ty-ma-nesies-sam.tex}
+\include{piesne/ty-prid-a-vladni-nam.tex}
 \end{songs}
 \end{document}
