@@ -1,0 +1,57 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = sk_SK
+% !TeX TS-program = pdflatex
+
+\documentclass[b5paper, 10pt, titlepage, twoside]{article}
+\usepackage[slovak]{babel}
+\usepackage[chorded]{songs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{musixtex}
+\usepackage{xpatch}
+%\usepackage{hyperref}
+\frenchspacing
+
+\input{patch.tex}
+\definecolor{myColor}{HTML}{000000}
+\geometry{left=2.25cm, right=2.25cm, top=2.5cm, bottom=2cm}
+
+\title{
+\Huge\textbf{\textcolor{myColor}{Mládežnícke piesne}}\\[2mm] 
+---------\begin{music} \trebleclef \end{music} ---------
+}
+\author{Tomáš Basarik}
+\date{Posledná úprava \\ \today}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\renewcommand{\lyricfont}{\sffamily}
+\renewcommand{\stitlefont}{\Large\bfseries\sffamily\color{myColor}}
+\renewcommand{\printchord}[1]{\bfseries\sffamily\color{myColor}#1}
+\renewcommand{\notebgcolor}{myColor!20}
+\renewcommand{\snumbgcolor}{myColor}
+\renewcommand{\thesongnum}{\textcolor{white}{\arabic{songnum}.}}
+\renewcommand{\versejustify}{\justifycenter}
+\renewcommand{\chorusjustify}{\justifycenter}
+\renewcommand{\clineparams}{\baselineskip=12pt}
+\renewcommand{\printversenum}[1]{\bf\sffamily Verš #1: }
+\setlength{\baselineadj}{5pt}
+\setlength{\versesep}{20pt}
+\setlength{\songnumwidth}{1.5cm}
+
+\songcolumns{0}
+\pagepreludes
+
+\begin{songs}{}
+\include{piesne/davam-vsetko.tex}
+\include{piesne/prisli-sme-ta-vzyvat.tex}
+\include{piesne/ty-ma-nesies-sam.tex}
+\end{songs}
+\end{document}
